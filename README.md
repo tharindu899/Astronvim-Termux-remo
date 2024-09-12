@@ -6,6 +6,12 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 ## 🛠️ Installation
 
+#### Install termux required packages
+
+```shell
+apt update && yes | apt upgrade && apt update && apt install neovim lua-language-server ripgrep lazygit yarn python python-pip ccls clang rust-analyzer git -y
+```
+
 #### Make a backup of your current nvim and shared folder
 
 ```shell
