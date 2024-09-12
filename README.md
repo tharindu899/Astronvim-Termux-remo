@@ -1,4 +1,4 @@
-# AstroNvim Template
+# AstroNvim Template For Termux
 
 **NOTE:** This is for AstroNvim v4+
 
