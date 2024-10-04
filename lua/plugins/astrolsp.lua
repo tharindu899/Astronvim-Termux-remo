@@ -9,7 +9,7 @@ return {
     formatting = {
       format_on_save = {
         enabled = true,
-        allow_filetypes = { "c", "cpp", "objc", "objcpp", "json", "jq", "rust" }, -- Add Rust filetype
+        allow_filetypes = { "c", "cpp", "objc", "objcpp", "json", "jq", "rust", "tex" }, -- Add LaTeX (tex)
       },
       timeout_ms = 1000,
     },
@@ -19,6 +19,7 @@ return {
       "ccls",          -- Added ccls
       "jq_lsp",        -- Added jq_lsp
       "rust_analyzer", -- Added rust-analyzer
+      "texlab",        -- Added texlab for LaTeX support
     },
     config = {
       clangd = {
@@ -83,6 +84,28 @@ return {
               checkThirdParty = false,
             },
             telemetry = { enable = false },
+          },
+        },
+      },
+      texlab = {
+        cmd = { "/data/data/com.termux/files/usr/bin/texlab" }, -- Set texlab binary path
+        filetypes = { "tex", "bib" },
+        root_dir = require("lspconfig").util.root_pattern(".git", vim.fn.getcwd()),
+        settings = {
+          texlab = {
+            build = {
+              executable = "latexmk",
+              args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-shell-escape", "%f" },
+              onSave = true,
+            },
+            forwardSearch = {
+              executable = "zathura", -- PDF viewer, change if using a different one
+              args = { "--synctex-forward", "%l:1:%f", "%p" },
+            },
+            chktex = {
+              onEdit = true,
+              onOpenAndSave = true,
+            },
           },
         },
       },
