@@ -1,9 +1,8 @@
+-- ~/.config/nvim/lua/plugins/catppuccin.lua
 return {
-  -- Define the plugin using lazy.nvim format
   "catppuccin/nvim",
   name = "catppuccin",
   config = function()
-    -- Plugin setup according to catppuccin documentation
     require("catppuccin").setup({
       flavour = "mocha", -- Options: "latte", "frappe", "macchiato", "mocha"
       background = {
@@ -11,7 +10,7 @@ return {
         dark = "macchiato",
       },
     })
-    -- Set the colorscheme
-    vim.cmd("colorscheme catppuccin")
+    -- No need for vim.cmd("colorscheme ..."), AstroNvim handles it
   end,
 }
+
