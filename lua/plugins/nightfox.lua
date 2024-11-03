@@ -1,19 +1,25 @@
--- ~/.config/nvim/lua/plugins/nightfox.lua
 return {
-  {
-    "EdenEast/nightfox.nvim",
-    config = function()
-      require('nightfox').setup({
-        options = {
-          styles = {
-            comments = "italic",
-            keywords = "bold",
-            functions = "bold",
-          },
-        },
-      })
-      -- No need for vim.cmd("colorscheme nightfox"), AstroNvim handles it
-    end,
-  }
+  "EdenEast/nightfox.nvim",
+  lazy = true,
+  opts = {
+    options = {
+      module_default = false,
+      modules = {
+        aerial = true,
+        cmp = true,
+        ["dap-ui"] = true,
+        dashboard = true,
+        diagnostic = true,
+        gitsigns = true,
+        native_lsp = true,
+        neotree = true,
+        notify = true,
+        symbol_outline = true,
+        telescope = true,
+        treesitter = true,
+        whichkey = true,
+      },
+    },
+    groups = { all = { NormalFloat = { link = "Normal" } } },
+  },
 }
-
