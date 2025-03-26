@@ -4,13 +4,12 @@ return {
   event = "User AstroFile",
   main = "lsp_signature",
   opts = {
-    hint_enable = false, -- disable hints as it will crash in some terminal
+    hint_enable = false, -- disable hints as it will crash in some terminals
   },
   specs = {
     {
       "folke/noice.nvim",
       optional = true,
-      ---@type NoiceConfig
       opts = {
         lsp = {
           signature = { enabled = false },
