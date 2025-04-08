@@ -1,6 +1,7 @@
 return {
   "AstroNvim/astrolsp",
   opts = {
+    meson = false,
     features = {
       codelens = true,
       inlay_hints = false,
