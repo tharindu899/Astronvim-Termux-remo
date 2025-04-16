@@ -12,7 +12,7 @@ return {
   -- { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.completion.cmp-nerdfont" },
-  { import = "astrocommunity.completion.avante-nvim" },
+  -- { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.comment.ts-comments-nvim" },
   -- { import = "astrocommunity.recipes.astrolsp-auto-signature-help" },
