@@ -20,11 +20,16 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
-
+```shell
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+```
 #### Clone the repository
 
 ```shell
-git clone https://github.com/remo7777/Astronvim-Termux.git ~/.config/nvim
+git clone https://github.com/tharindu899/Astronvim-Termux.git ~/.config/nvim
 ```
 
 #### Start Neovim
